@@ -168,44 +168,21 @@ The comprehensive experimental analysis provides concrete performance metrics an
 
 The following chart illustrates the accuracy scores across different models and datasets:
 
-```json
-{
-  "type": "bar",
-  "data": {
-    "labels": ["GTZAN CNN on GTZAN", "GTZAN CNN on Balanced GTZAN", "Spotify CNN on Spotify", "GTZAN CNN on Spotify"],
-    "datasets": [{
-      "label": "Accuracy",
-      "data": [0.747499, 0.656000, 0.706667, 0.417556],
-      "backgroundColor": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"],
-      "borderColor": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728"],
-      "borderWidth": 1
-    }]
-  },
-  "options": {
-    "scales": {
-      "y": {
-        "beginAtZero": true,
-        "title": {
-          "display": true,
-          "text": "Accuracy"
-        }
-      },
-      "x": {
-        "title": {
-          "display": true,
-          "text": "Model and Dataset"
-        }
-      }
-    },
-    "plugins": {
-      "title": {
-        "display": true,
-        "text": "Model Accuracy Comparison Across Datasets"
-      }
-    }
-  }
-}
+#### Model Accuracy Comparison Across Datasets
+
 ```
+GTZAN CNN on GTZAN        ████████████████████████████████████████████████████████████████████████████ 74.75%
+GTZAN CNN on Balanced     ████████████████████████████████████████████████████████████████  65.60%
+Spotify CNN on Spotify    ██████████████████████████████████████████████████████████████████████████  70.67%
+GTZAN CNN on Spotify      ████████████████████████████████████████████  41.76%
+```
+
+| Model Configuration | Dataset | Accuracy | Performance Category |
+|---------------------|---------|----------|---------------------|
+| GTZAN CNN | GTZAN | 74.75% | Strong baseline |
+| GTZAN CNN | Balanced GTZAN | 65.60% | Reduced overfitting |
+| Spotify CNN | Spotify | 70.67% | Contemporary adaptation |
+| GTZAN CNN | Spotify | 41.76% | Cross-temporal failure |
 
 **Key Insights**:
 - The drop from 0.747499 to 0.656000 for GTZAN CNN on balanced data suggests sensitivity to dataset composition and potential overfitting.
